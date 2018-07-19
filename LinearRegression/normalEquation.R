@@ -1,8 +1,4 @@
-costFunction <- function(x, y, theta) {
-  h = x %*% theta
-  J = (1/(2*length(y)))*sum((h-y)^2)
-  return(J)
-}
+source(costFunction)
 
 normalEquation <- function(x, y) {
   theta = solve(t(x) %*% x) %*% t(x) %*% y

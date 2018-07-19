@@ -1,20 +1,17 @@
-costFunction <- function(x, y, theta) {
-  h = x %*% theta
-  J = (1/(2*length(y)))*sum((h-y)^2)
-  return(J)
-}
+source(sigmoid)
+source(costFunction)
 
 gradientDescent <- function(x, y, theta, alpha, max.iters) {
   J_list = c()
   theta_list = c()
   for(i in 1:max.iters) {
     temp = matrix(0,ncol(x),1)
-    h = x %*% theta
+    z = x%*%theta
+    h = sigmoid(z)
     for(j in 1:length(theta)) {
       temp[j] = theta[j] - (alpha/nrow(x))*t(h-y)%*%as.matrix(x[,j])
     }
     J_list[i] = costFunction(x, y, temp)
-    theta_list = rbind(theta_list, t(temp))
     theta = temp
   }
   var_names = colnames(x)
