@@ -1,6 +1,6 @@
 library(mvtnorm)
 library(MASS)
-source(utils)
+source("utils.R")
 
 #Expectation Step
 Estep <- function(data, num_clusters, mu, sigma, prior) {

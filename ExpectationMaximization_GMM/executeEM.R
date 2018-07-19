@@ -1,6 +1,6 @@
-source(estep)
-source(mstep)
-source(utils)
+source("estep.R")
+source("mstep.R")
+source("utils.R")
 
 #Execute EM using this function
 executeEM <- function(data, num_clusters, num_iters, init_mu, init_sigma, init_prior, convergence) {

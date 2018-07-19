@@ -1,4 +1,4 @@
-source(costFunction)
+source("costFunction.R")
 
 normalEquation <- function(x, y) {
   theta = solve(t(x) %*% x) %*% t(x) %*% y

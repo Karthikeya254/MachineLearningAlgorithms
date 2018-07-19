@@ -1,4 +1,4 @@
-source(sigmoid)
+source("sigmoid.R")
 
 costFunction <- function(x, y, theta) {
   z = x%*%theta

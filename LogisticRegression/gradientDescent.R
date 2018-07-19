@@ -1,5 +1,5 @@
-source(sigmoid)
-source(costFunction)
+source("sigmoid.R")
+source("costFunction.R")
 
 gradientDescent <- function(x, y, theta, alpha, max.iters) {
   J_list = c()
